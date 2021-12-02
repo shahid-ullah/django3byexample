@@ -9,12 +9,12 @@ urlpatterns = [
     # path('login/', views.user_login, name='login'),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    # password change urls
     path(
         'password_change/',
         auth_views.PasswordChangeView.as_view(),
         name='password_change',
     ),
-    # password change urls
     path(
         'password_change/done/',
         auth_views.PasswordChangeDoneView.as_view(),
@@ -41,5 +41,6 @@ urlpatterns = [
         auth_views.PasswordResetCompleteView.as_view(),
         name='password_reset_complete',
     ),
+    path('register/', views.register, name='register'),
     path('', views.dashboard, name='dashboard'),
 ]
