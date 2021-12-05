@@ -1,3 +1,4 @@
 pip-tools
 Django
 Pillow
+easy_thumbnails

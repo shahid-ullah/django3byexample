@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # local apps
     'images.apps.ImagesConfig',
+    # third-party apps
+    'easy_thumbnails',
 ]
 
 MIDDLEWARE = [
