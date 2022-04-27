@@ -6,7 +6,7 @@
 
 {% block content %}
   <h1>Images bookmarked</h1>
-  <div 'image-list'>
+  <div id='image-list'>
     {% include 'images/image/list_ajax.html' %}
   </div>
 {% endblock %}
@@ -19,15 +19,16 @@
   $(window).scroll(function(){
     var margin = $(document).height() - $(window).height() - 200;
     if($(window).scrollTop() > margin && empty_page == false && block_request == false){
-      console.log('scrolling');
+      {# console.log('scrolling'); #}
       block_request = true;
       page += 1;
       $.get('?page=' + page, function(data){
         if (data == ''){
-          console.log('data', data)
+          {# console.log('data', data) #}
           empty_page = true;
         }
         else {
+          {# console.log('data ', data) #}
           block_request = false;
           $('#image-list').append(data);
         }

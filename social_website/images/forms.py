@@ -30,6 +30,8 @@ class ImageCreateForm(forms.ModelForm):
     def save(self, force_insert=False, force_update=False, commit=False):
         image = super().save(commit=False)
         image_url = self.cleaned_data['url']
+
+        # generate image name
         name = slugify(image.title)
         extension = image_url.rsplit('.', 1)[1].lower()
         image_name = f'{name}.{extension}'
