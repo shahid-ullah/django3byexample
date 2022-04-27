@@ -37,6 +37,7 @@ show_missing = true
 fail_under = 100
 
 [tool.pyright]
+plugins = ["mypy_django_plugin.main"]
 include = ["src"]
 exclude = ["**/node_modules",
     "**/__pycache__",
@@ -59,8 +60,6 @@ executionEnvironments = [
   { root = "src/tests", extraPaths = ["src/tests/e2e", "src/sdk" ]},
   { root = "src" }
 ]
-[tool.pyright]
-plugins = ["mypy_django_plugin.main"]
 
 [tool.django-stubs]
-django_settings_module = "src.settings"
+django_settings_module = "src.settings.development"
