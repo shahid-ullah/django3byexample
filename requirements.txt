@@ -4,50 +4,58 @@
 #
 #    pip-compile
 #
-asgiref==3.4.1
+asgiref==3.5.0
     # via django
-click==8.0.3
+backports-zoneinfo==0.2.1
+    # via django
+click==8.1.2
     # via pip-tools
-cssselect2==0.4.1
+cssselect2==0.6.0
     # via svglib
-django==3.2.9
+django==4.0.4
     # via
     #   -r requirements.in
+    #   django-debug-toolbar
+    #   django-extensions
     #   easy-thumbnails
-easy-thumbnails==2.8
+django-debug-toolbar==3.2.4
     # via -r requirements.in
-lxml==4.6.4
+django-extensions==3.1.5
+    # via -r requirements.in
+easy-thumbnails==2.8.1
+    # via -r requirements.in
+lxml==4.8.0
     # via svglib
 pep517==0.12.0
     # via pip-tools
-pillow==8.4.0
+pillow==9.1.0
     # via
     #   -r requirements.in
     #   easy-thumbnails
     #   reportlab
-pip-tools==6.4.0
+pip-tools==6.6.0
     # via -r requirements.in
-pytz==2021.3
-    # via django
-reportlab==3.6.3
+reportlab==3.6.9
     # via
     #   easy-thumbnails
     #   svglib
 sqlparse==0.4.2
-    # via django
-svglib==1.1.0
+    # via
+    #   django
+    #   django-debug-toolbar
+svglib==1.2.1
     # via easy-thumbnails
 tinycss2==1.1.1
     # via
     #   cssselect2
     #   svglib
-tomli==1.2.2
+tomli==2.0.1
     # via pep517
 webencodings==0.5.1
     # via
     #   cssselect2
     #   tinycss2
-wheel==0.37.0
+wheel==0.37.1
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
