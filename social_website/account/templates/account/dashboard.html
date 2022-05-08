@@ -8,5 +8,5 @@
 
 {% with total_images_created=request.user.images_created.count %} <p>Welcome to your dashboard. You have bookmarked {{ total_images_created }} image{{ total_images_created| pluralize }}.</p> {% endwith %}
 
-<p>You can also <a href="">edit your profile</a> or <a href="{% url "password_change" %}">change your password</a>.</p>
+<p>You can also <a href="{% url 'edit' %}">edit your profile</a> or <a href="{% url "password_change" %}">change your password</a>.</p>
 {% endblock content %}

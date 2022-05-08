@@ -53,7 +53,7 @@ def image_like(request):
             else:
                 image.users_like.remove(request.user)
             return JsonResponse({'status': 'ok'})
-        except:
+        except Exception as ex:
             pass
         return JsonResponse({'status': 'error'})
 
